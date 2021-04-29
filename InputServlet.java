@@ -1,5 +1,5 @@
 package sec01.ex01;
-
+// ìˆ˜ì •í•œ íŒŒì¼ì…ë‹ˆë‹¤.
 import java.io.IOException;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -27,7 +27,7 @@ public class InputServlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("init ¸Ş¼­µå È£Ãâ");
+		System.out.println("init ï¿½Ş¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½");
 	}
 
 	/**
@@ -39,18 +39,18 @@ public class InputServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String user_id = request.getParameter("user_id"); // ÇÑ °³¾¿ Àü¼ÛµÈ °ªÀº getParameter() ¸¦ ÀÌ¿ë
+		String user_id = request.getParameter("user_id"); // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ûµï¿½ ï¿½ï¿½ï¿½ï¿½ getParameter() ï¿½ï¿½ ï¿½Ì¿ï¿½
 		String user_pw = request.getParameter("user_pw");
-		System.out.println("¾ÆÀÌµğ : " + user_id);
-		System.out.println("ºñ¹Ğ¹øÈ£ : " + user_pw);
-		String[] subject = request.getParameterValues("subject"); // ÇÏ³ªÀÇ nameÀ¸·Î ¿©·¯ °ªÀ» Àü¼ÛÇÏ´Â °æ¿ì getParameterValues()¸¦ ÀÌ¿ëÇØ ¹è¿­ ÇüÅÂ·Î ¹İÈ¯µÊ.
+		System.out.println("ï¿½ï¿½ï¿½Ìµï¿½ : " + user_id);
+		System.out.println("ï¿½ï¿½Ğ¹ï¿½È£ : " + user_pw);
+		String[] subject = request.getParameterValues("subject"); // ï¿½Ï³ï¿½ï¿½ï¿½ nameï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ getParameterValues()ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½è¿­ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½È¯ï¿½ï¿½.
 		for ( String str : subject) {
-			System.out.println("¼±ÅÃÇÑ °ú¸ñ : " + str);
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : " + str);
 		}
 	}
 	
 	public void destroy() {
-		System.out.println("destroy ¸Ş¼­µå È£Ãâ");
+		System.out.println("destroy ï¿½Ş¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½");
 	}
 
 
